@@ -102,7 +102,7 @@ const boxEmailCode = document.getElementById('boxEmailCode')
 
       //---se hace la peticion al backend y se le mandan los datos para enviar el código----
 
-      fetch('http://127.0.0.1:5000/sendEmailToValidateVerification', {
+      fetch('https://hug-backend.vercel.app/sendEmailToValidateVerification', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -145,7 +145,7 @@ const myVerificationCodeInput2 = document.getElementById('myInputValidated')
           if (myDefinitiveVerificationCode === myVerificationCodeInput2.value) {
               console.log('codigo correcto')
               //---aqui se inicia sesion
-              fetch('http://127.0.0.1:5000/register', {
+              fetch('https://hug-backend.vercel.app/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
