@@ -35,11 +35,7 @@ return (
             <div className="w100 h100  dFlex  oyAuto pRelative fdColumn bsBorderBox p20 gap20" id="containerChat">
                 {/* ------CONTENEDORES DE BURBUJAS DE CONVERSACION------ */}
                
-                     <div className="divConversation bcWhite w50 hAuto br10px p20  bubbleChatRight fs4 ff2">
-                     Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) 
-                     </div>
-                     <div className="bcWhite w50 hAuto br10px p20  bubbleChatLeft fs4 ff2">Hola</div>
- 
+                    
                 {/* ------------------------------ */}
             </div>
             {/* -------------PARTE DE CAJA DE TEXTO Y BOTON DE ENVIO----------------- */}

@@ -16,7 +16,12 @@ export function sendMessage_ToIA() {
         }
 
         let myMessage = myInputMessage.value
-
+        myInputMessage.value = ""
+        const myDivRight = document.createElement("div")
+              myDivRight.className = 'divConversation bcWhite w50 hAuto br10px p20  bubbleChatRight fs4 ff2'
+              myDivRight.textContent = myMessage
+              myContainerChat.appendChild(myDivRight)
+              console.log('--antes del fetch')
         fetch('https://hug-ai-backend.vercel.app/chat', {
             method: 'POST',
             headers: {
@@ -29,10 +34,13 @@ export function sendMessage_ToIA() {
           })
           .then(response => response.json())
           .then(data => {
-            if (data.choices) {
-              console.log("Respuesta IA:", data.choices);
-
-              const myDiv = document.createElement("div")
+            if (data.response) {
+              console.log("Respuesta IA:", data.response);
+            const myDivLeft = document.createElement("div")
+              myDivLeft.className = 'divConversation bcWhite w50 hAuto br10px p20  bubbleChatLeft fs4 ff2'
+              myDivLeft.innerHTML = data.response
+              myContainerChat.appendChild(myDivLeft)
+              
               // Puedes mostrar la respuesta en tu UI aquí
             } else if (data.error) {
               console.error("Error:", data.error);
