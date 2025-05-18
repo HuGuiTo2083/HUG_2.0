@@ -4,6 +4,7 @@ import '../styles/myClasses.css'
 import { changeToSignOrLog } from "../scripts/changeToSignOrLog";
 import { animatedBackground } from "../scripts/changeToSignOrLog";
 import Login_box from "../components/Login_box";
+import { consult_tests } from "../scripts/consult_tests";
 import EmailCode_Box from "../components/EmailCode_Box";
 function View_login(){
 
@@ -13,6 +14,8 @@ const viewLogin = document.getElementById('viewLogin')
 if(viewLogin){
   animatedBackground(viewLogin.id)
 }
+
+document.getElementById('btLogin').addEventListener('click', consult_tests)
 
 //---este return es para limpiar los listeners cuando el componente se desmonte
 return () =>{

@@ -1,3 +1,5 @@
+import myDown_Logo from '../assets/logo_HUG_abajo.png'
+import myUp_Logo from '../assets/logo_HUG_arriba.png'
 
 
 function EmailCode_Box({className, id}){
@@ -15,7 +17,11 @@ return (
 
     {/* ----------------------------------------------------- */}
 
-    <div className="w100 h100 pRelative bcRed"></div>
+    <div className="w100 h100 pRelative  dFlex jcCenter aiCenter">
+      <img className='myImg9 pAbsolute dNone' src={myUp_Logo} ></img>
+      <img className='myImg9 pAbsolute dNone' src={myDown_Logo} ></img>
+
+    </div>
 </div>
 
 )
