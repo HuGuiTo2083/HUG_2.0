@@ -4,7 +4,7 @@ import '../styles/myClasses.css'
 import { changeToSignOrLog } from "../scripts/changeToSignOrLog";
 import { animatedBackground } from "../scripts/changeToSignOrLog";
 import Login_box from "../components/Login_box";
-
+import EmailCode_Box from "../components/EmailCode_Box";
 function View_login(){
 
 useEffect(()=>{
@@ -39,6 +39,7 @@ return () =>{
       button: "btLogin",
       button2: "btChangeRegister"
      }}
+
      />
      {/* ------------------------------------------ */}
 
@@ -63,7 +64,7 @@ return () =>{
      {/* ---------------- */}
 
      {/* ----------------CUADRO PARA VALIDAR CODIGO QUE SE ENVIA A EMAIL-------- */}
-
+    <EmailCode_Box className='dNone' id='boxEmailCode'></EmailCode_Box>
      {/* --------------------------------- */}
     </div>
 );

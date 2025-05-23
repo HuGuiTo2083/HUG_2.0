@@ -20,41 +20,43 @@ const boxRegister = document.getElementById('boxRegister')
 
   //---para cuando se quiere registrar
  
-
+const btRegister = document.getElementById('btRegister')
+const boxEmailCode = document.getElementById('boxEmailCode')
+btRegister.addEventListener('click', ()=>{
+  boxRegister.style.display='none'
+  boxEmailCode.style.display= 'grid'
+})
 
 
 
   //-----PARTE PARA AGREGARLE FUNCIONALIDAD AL INPUT DEL CODIGO DE VERIFICACION
 
-//   const myVerificationCodeInput = document.getElementById('myInputValidated')
+  const myVerificationCodeInput = document.getElementById('myInputValidated')
    
-//   myVerificationCodeInput.addEventListener('input', () => {
+  myVerificationCodeInput.addEventListener('input', () => {
 
 
 
+    myVerificationCodeInput.value = myVerificationCodeInput.value.toUpperCase()
 
-   
-
-//     myVerificationCodeInput.value = myVerificationCodeInput.value.toUpperCase()
-
-//     const myCharactersTotal = myVerificationCodeInput.value.length
+    const myCharactersTotal = myVerificationCodeInput.value.length
     
-//     if (myCharactersTotal === 2) {
-//       myVerificationCodeInput.value = myVerificationCodeInput.value + ' - '
-//     }
-//     if (myCharactersTotal === 9) {
-//       myVerificationCodeInput.value = myVerificationCodeInput.value + ' - '
-//     }
+    if (myCharactersTotal === 2) {
+      myVerificationCodeInput.value = myVerificationCodeInput.value + ' - '
+    }
+    if (myCharactersTotal === 9) {
+      myVerificationCodeInput.value = myVerificationCodeInput.value + ' - '
+    }
 
-//     if (myCharactersTotal === 4) {
-//       myVerificationCodeInput.value = myVerificationCodeInput.value.substring(0, 1)
-//     }
-//     if (myCharactersTotal === 11) {
-//       myVerificationCodeInput.value = myVerificationCodeInput.value.substring(0, 8)
-//     }
+    if (myCharactersTotal === 4) {
+      myVerificationCodeInput.value = myVerificationCodeInput.value.substring(0, 1)
+    }
+    if (myCharactersTotal === 11) {
+      myVerificationCodeInput.value = myVerificationCodeInput.value.substring(0, 8)
+    }
 
 
-//   })
+  })
 
 
 
