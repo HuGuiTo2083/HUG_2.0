@@ -35,7 +35,12 @@ return () =>{
         </div>
         {/* ---------------PARTE DE PREGUNTA Y OPCIONES-------- */}
         <div className='w100 h100 dFlex jcCenter aiCenter  fdColumn' id='QuestionsContainer' ref={containerRef}>
-            
+            <div className=' myInfoTestCard w100 h100 dFlex fdColumn aiCenter jcCenter gap20  bsBorderBox pl20 taCenter pr20' id='infoTestCard1'>
+              <label className='fw700 cFourth ff2 fs4 gc_span4'>Durante las últimas 2 semanas, ¿qué tan seguido ha 
+              tenido molestias debido a los siguientes problemas? </label>
+              <label className='fw600 cWhite ff2 fs4 gc_span4'>Poco interés o placer en hacer cosas</label>
+
+            </div>
         </div>
         {/* ----------PARTE DONDE SE AVANZA A LA SIGIENTE Y SE RETROCEDE PARA CAMBIAR RESPUESTA----- */}
         <div className='w100 h100 dFlex jcCenter aiCenter gap20'>

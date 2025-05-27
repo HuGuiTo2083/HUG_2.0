@@ -188,7 +188,7 @@ btValidate.addEventListener('click', handleValidate)
  
 const  StartLogin = ()=>{
   
-  fetch('http://127.0.0.1:5000/login', {
+  fetch('https://hug-backend.vercel.app/login', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -203,6 +203,11 @@ const  StartLogin = ()=>{
     .then(data => {
         console.log('Success:', data);  // Procesamos la respuesta
         let myStatus = data.status
+
+        //------para probar aca en prose
+document.getElementById('viewLogin').style.display='none'
+                    document.getElementById('viewTest').style.display='grid'
+        //-------------------------------
         if (myStatus=="1") {
        //----AQUI ES DONDE YA SE CAMBIA AL MODULO DE PREGUNTAS
           document.getElementById('viewLogin').style.display='none'

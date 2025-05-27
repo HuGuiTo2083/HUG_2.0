@@ -120,7 +120,7 @@
     } */
 .myInfoTestCard{
     display: grid !important;
-    grid-template-columns: 4fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr;
 }
 
