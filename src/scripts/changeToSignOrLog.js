@@ -204,9 +204,9 @@ const  StartLogin = ()=>{
         console.log('Success:', data);  // Procesamos la respuesta
         let myStatus = data.status
 
-        //------para probar aca en prose
-document.getElementById('viewLogin').style.display='none'
-                    document.getElementById('viewTest').style.display='grid'
+//         //------para probar aca en prose
+// document.getElementById('viewLogin').style.display='none'
+//                     document.getElementById('viewTest').style.display='grid'
         //-------------------------------
         if (myStatus=="1") {
        //----AQUI ES DONDE YA SE CAMBIA AL MODULO DE PREGUNTAS

@@ -9,7 +9,9 @@
 }
 
 
-
+body{
+    height: 100vh !important;
+}
 
 .bcFirst{
     background-color: var(--first);
@@ -68,32 +70,55 @@
 }
 
 /* Degradado del PRIMERO al QUINTO color */
-.bcFirstFifth_anim{
-  background: linear-gradient(135deg, var(--first), var(--fifth));
-  background-size: 200% 200%;           /* superficie grande para que “camine” */
-  animation: gradientShift 5s ease-in-out infinite;
-}
+.bcFirstFifth_anim {
+    background: linear-gradient(135deg, var(--first), var(--fifth));
+    background-size: 300% 300%; /* Más grande para más movimiento */
+    animation: gradientShift 5s ease-in-out infinite; /* Más rápido */
+  }
+  
+  /* Degradado del TERCER al SEGUNDO color */
+  .bcSecondThird_anim {
+    background: linear-gradient(135deg, var(--third), var(--second));
+    background-size: 300% 300%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
 
-/* Degradado del TERCER al SEGUNDO color */
-.bcSecondThird_anim{
-  background: linear-gradient(135deg, var(--third), var(--second));
-  background-size: 200% 200%;
-  animation: gradientShift 5s ease-in-out infinite;
-}
+  .bubbleChatRight{
+    align-self: flex-end;
+  }
+
+  .bubbleChatLeft{
+    align-self: flex-start;
+  }
+
+  
+  
+  @keyframes gradientShift {
+    0%   { background-position: 0%   50%; }
+    25%  { background-position: 100% 100%; }  /* Más movimiento diagonal */
+    50%  { background-position: 0%   50%; }
+    75%  { background-position: 100% 0%; }    /* Más movimiento diagonal */
+    100% { background-position: 0%   50%; }
+  }
+
+  .glowButton1 {
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.5);
+    
+  }
+  
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.8);
+    }
+  }
 
 .selectOption{
     background-color: #433220 !important;
     color:white !important;
 }
-
-
-@keyframes gradientShift {
-  0%   { background-position: 0%   50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0%   50%; }
-}
-
-
 
 
 /* Smartphones (portrait and landscape) */
@@ -126,6 +151,8 @@
 
 .myBt{
     height: auto !important;
+    width: 8% !important;
+    font-size: 40px;
 }
 
 #viewTest{
@@ -135,11 +162,40 @@
 
 .myOption{
     height: 90% !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: auto !important;
-    justify-content: center !important;
-    text-align: center;
     box-sizing: border-box;
     padding-left: 10px;
 }
+
+
+    
+}
+
+@media only screen and (min-width: 1200px){
+    .myInfoTestCard{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr;
+    }
+    
+    .myBt{
+        height: auto !important;
+        width: 8% !important;
+        font-size: 40px;
+    }
+    
+    #viewTest{
+        grid-template-rows: 1fr 2fr 1fr!important;
+        height: 100vh !important;
+    }
+    
+    .myOption{
+        height: 90% !important;
+        width: auto !important;
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
     
 }

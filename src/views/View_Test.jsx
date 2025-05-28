@@ -28,26 +28,21 @@ return () =>{
 
 
   return (
-    <div className={` ${className} bcSecondThird_anim gtc_1 gtr_1_3_1 w100vw h100vh pRelative`} id="viewTest">
+    <div className={` ${className} bcSecondThird_anim gtc_1 gtr_1_3_1 gap15 w100vw h100vh pRelative`} id="viewTest">
         {/* ----------------------AQUI SOLO VIENE EL NUMERO DE PREGUNTA EN EL QUE TE ENCUENTRAS------------- */}
-        <div className='w100 h100  ff2 fw300 cWhite fs5 dFlex jcCenter aiCenter'>
+        <div className='w100 h100  ff1 fw300 cWhite bcThird fs5 dFlex jcCenter aiCenter ls4 '>
             Pregunta &nbsp; <span id='lbNumberItem'></span> &nbsp; - 16
         </div>
         {/* ---------------PARTE DE PREGUNTA Y OPCIONES-------- */}
         <div className='w100 h100 dFlex jcCenter aiCenter  fdColumn' id='QuestionsContainer' ref={containerRef}>
-            <div className=' myInfoTestCard w100 h100 dFlex fdColumn aiCenter jcCenter gap20  bsBorderBox pl20 taCenter pr20' id='infoTestCard1'>
-              <label className='fw700 cFourth ff2 fs4 gc_span4'>Durante las últimas 2 semanas, ¿qué tan seguido ha 
-              tenido molestias debido a los siguientes problemas? </label>
-              <label className='fw600 cWhite ff2 fs4 gc_span4'>Poco interés o placer en hacer cosas</label>
-
-            </div>
+           
         </div>
         {/* ----------PARTE DONDE SE AVANZA A LA SIGIENTE Y SE RETROCEDE PARA CAMBIAR RESPUESTA----- */}
         <div className='w100 h100 dFlex jcCenter aiCenter gap20'>
-            <button className='myBt w30 h40 bNone brTopLeft1 brBottomLeft1 bcSixth cWhite ff2 fw400 fs5 cPointer'
+            <button className='trans0-5 hoverLight myBt w30 h40 bNone brTopLeft1 brBottomLeft1 bcSecond cThird ff2 fw400 fs5 cPointer'
             id='prevTest' ref={prevBtnRef}> 
                 &lt; </button>
-            <button className=' myBt w30 h40 bNone brTopRight1 brBottomRight1 bcSixth cWhite ff2 fw400 fs5 cPointer'
+            <button className='trans0-5 hoverLight myBt w30 h40 bNone brTopRight1 brBottomRight1 bcSecond cThird ff2 fw400 fs5 cPointer'
             id='nextTest'  ref={nextBtnRef}>
                  &gt; </button>
 

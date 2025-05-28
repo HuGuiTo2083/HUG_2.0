@@ -11,7 +11,7 @@ export function consult_tests() {
 
   async function consultarPreguntas() {
     try {
-      const respuesta = await fetch('http://127.0.0.1:5000/test_questions', {
+      const respuesta = await fetch('https://hug-backend.vercel.app/test_questions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'   // cambia si tu endpoint espera otro formato
@@ -31,11 +31,11 @@ export function consult_tests() {
 
           myMainIndex++;
           const myDiv = document.createElement('div')
-          myDiv.className = `w100 h100 dNone fdColumn aiCenter jcCenter gap20  bsBorderBox pl20 taCenter pr20`;
+          myDiv.className = ` trans0-5 hoverLight w100 h100 dNone fdColumn aiCenter jcCenter gap20  bsBorderBox pl20 taCenter pr20`;
           myDiv.id = `infoTestCard${myMainIndex}`
 
           const myTitle1 = document.createElement('label')
-          myTitle1.className = 'fw700 cWhite ff2 fs4'
+          myTitle1.className = 'fw700 cBlack ff2 fs4'
           myTitle1.innerHTML = myMainItem
           myTitle1.style.gridColumn = 'span 4'
 
@@ -209,7 +209,7 @@ export function consult_tests() {
     }
   }
 
-  //consultarPreguntas()
+  consultarPreguntas()
 
 
   const prevTest = document.getElementById('prevTest')
@@ -222,9 +222,19 @@ export function consult_tests() {
   })
   const nextTest = document.getElementById('nextTest')
   nextTest.addEventListener('click', () => {
+    if(mainIndex_toVisible<16){
     document.getElementById(`infoTestCard${mainIndex_toVisible}`).style.display = 'none'
     mainIndex_toVisible++;
-    to_Visible_Card()
+   
+      to_Visible_Card()
+    }
+    else{
+      const myView_Test = document.getElementById('viewTest')
+      myView_Test.style.display = 'none'
+
+       const myView_Chatbot = document.getElementById('viewChatbot')
+       myView_Chatbot.style.display = 'grid'
+    }
   })
 
 
